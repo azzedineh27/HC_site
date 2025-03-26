@@ -1,0 +1,15 @@
+/* Reset général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Styles globaux */
+  body, html {
+    height: 100%;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.navbar-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid white;
+  border-radius: 20px;
+  padding: 12px 45px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  position: relative;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+.language-dropdown {
+  position: relative;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(145deg, rgba(0,198,255,0.15), rgba(0,114,255,0.08));
+  border: 1.5px solid rgba(255,255,255,0.2);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-weight: 500;
+  font-size: 0.95em;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: white;
+  color: #02192f;
+}
+
+.lang-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background-color: #02192f; /* 👈 opaque adapté à ton fond */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  animation: fadeDrop 0.25s ease-in-out;
+  padding: 6px 0;
+  margin : 0;
+  min-width: 150px;
+  list-style : none; 
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px; /* ⬅️ réduit */
+  font-size: 0.88em;  /* ⬅️ plus discret */
+  font-weight: 500;
+  transition: background 0.25s ease;
+  white-space: nowrap;
+}
+
+.lang-option:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #00c6ff;
+  cursor: pointer;
+}

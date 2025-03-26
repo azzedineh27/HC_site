@@ -1,0 +1,54 @@
+/* 📁 src/styles/OffersHero.css */
+
+.offers-hero {
+  text-align: center;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background: transparent;
+}
+
+.offers-hero-title {
+  font-size: 5rem;
+  text-shadow: 0 0 10px rgba(0, 198, 255, 0.4);
+  margin-bottom: 20px;
+}
+
+.offers-hero-subtitle {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: #e0f7ff;
+  opacity: 0.9;
+}
+
+.offers-scroll-btn {
+  position: relative;
+  display: inline-block;
+  color: white;
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid white;
+  background: transparent;
+  transition: color 0.3s ease, background 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.offers-scroll-btn span {
+  position: absolute;
+  display: block;
+  background: white;
+}
+
+.offers-scroll-btn:hover {
+  color: black;
+  background: white;
+}
