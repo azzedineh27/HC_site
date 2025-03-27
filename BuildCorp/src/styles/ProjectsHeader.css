@@ -3,10 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Prend une grande hauteur pour cacher la liste des projets */
+    min-height: 100vh;
     text-align: center;
     padding: 50px 20px;
-    background: linear-gradient(to bottom, black, #002b4e);
     color: white;
 }
 

@@ -1,4 +1,5 @@
 .offers-page {
-    background-color: #02192f;
+    background: linear-gradient(to bottom, #00111f, #004080);
+
     background-size: cover;
 }

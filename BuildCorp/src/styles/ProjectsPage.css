@@ -1,4 +1,4 @@
 .projects-page {
-    background: linear-gradient(to bottom, black, #002b4e);
-    min-height: 100vh; /* Assure que toute la hauteur de la page est couverte */
+    background: linear-gradient(to bottom, #02101d, #023859,rgb(22, 109, 170));
+    min-height: 100vh;
 }

@@ -1,7 +1,6 @@
-// 📁 src/components/OffersHero.jsx
-import "../styles/OffersHero.css";
+import "../styles/OffersHeader.css";
 
-const OffersHero = () => {
+const OffersHeader = () => {
   const handleScroll = () => {
     const section = document.getElementById("offers-section");
     if (section) section.scrollIntoView({ behavior: "smooth" });
@@ -20,4 +19,4 @@ const OffersHero = () => {
   );
 };
 
-export default OffersHero;
+export default OffersHeader;

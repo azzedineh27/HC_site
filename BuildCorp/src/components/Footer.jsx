@@ -32,11 +32,17 @@ const Footer = () => {
             <a href="#" className="social-icon"><i className="fab fa-instagram"></i></a>
           </div>
 
-          {/* Conteneur des images sociales */}
+          {/* Conteneur des images réseaux */}
           <div className="social-images">
-            <img src="./src/assets/snap.webp" alt="Snapchat" className="social-image" />
-            <img src="./src/assets/linkedin.webp" alt="LinkedIn" className="social-image" />
-            <img src="./src/assets/insta.webp" alt="Instagram" className="social-image" />
+            <a href="https://www.snapchat.com" target="_blank" rel="noopener noreferrer">
+              <img src="./src/assets/snap.webp" alt="Snapchat" className="social-image" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="./src/assets/linkedin.webp" alt="LinkedIn" className="social-image" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <img src="./src/assets/insta.webp" alt="Instagram" className="social-image" />
+            </a>
           </div>
         </div>
 

@@ -6,18 +6,19 @@ const ServicesDetail = () => {
     <section id="services-detail" className="detailed-services">
       <h2>Nos Services en Détail</h2>
       <div className="services-container">
-        <div className="service-card">
-          <img src="./src/assets/design.jpg" alt="Design UX/UI" />
-          <div className="service-info">
-            <h3>Design UX/UI</h3>
-            <p>Nous concevons des interfaces modernes et intuitives pour une expérience utilisateur optimisée.</p>
-          </div>
-        </div>
+        
         <div className="service-card">
           <img src="./src/assets/dev.jpg" alt="Développement Web" />
           <div className="service-info">
             <h3>Développement Web</h3>
             <p>Des sites performants et responsifs adaptés à vos besoins professionnels.</p>
+          </div>
+        </div>
+        <div className="service-card">
+          <img src="./src/assets/application.jpg" alt="Applications" />
+          <div className="service-info">
+            <h3>Applications et outils</h3>
+            <p>Nous concevons également des applications et des outils modernes.</p>
           </div>
         </div>
         <div className="service-card">

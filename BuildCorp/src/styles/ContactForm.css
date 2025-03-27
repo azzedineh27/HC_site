@@ -49,17 +49,19 @@
 
 /* ✅ Formulaire réduit */
 .contact-form {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.05);  
+  border: 1px solid rgba(255, 255, 255, 0.2);  
+  backdrop-filter: blur(14px);  
   padding: 34px; /* -15% */
-  border-radius: 20px;
   width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);  
   max-width: 425px; /* -15% de 500px */
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 1s ease-in;
 }
-
 .contact-form h2 {
   text-align: center;
   margin-bottom: 25px;
@@ -132,4 +134,107 @@
   .contact-box-left {
     text-align: center;
   }
+}
+
+.form-front,
+.form-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 20px;
+}
+
+/* Flip effect container */
+.form-flip-container {
+  position: relative;
+  width: 425px;
+  height: 500px;
+  perspective: 1200px;
+}
+/* Nouveau conteneur qui fait le flip */
+.form-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+/* Appliquer la rotation ici */
+.form-flip-container.flipped .form-inner {
+  transform: rotateY(180deg);
+}
+.contact-form.form-front,
+.contact-form.form-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.contact-form.form-back {
+  transform: rotateY(180deg);
+}
+
+/* Switch button */
+.switch-btn {
+  margin-top: 20px;
+  background: none;
+  border: 1px solid #00c6ff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.switch-btn:hover {
+  background: #00c6ff;
+  color: #000;
+}
+.quote-select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 0.85em;
+  border: none;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  appearance: none;
+  outline: none;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.quote-select:hover,
+.quote-select:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid #00c6ff;
+  cursor: pointer;
+}
+.form-front,
+.form-back {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.form-flip-container:not(.flipped) .form-front {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form-flip-container.flipped .form-back {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form-front.loaded {
+  animation: fadeIn 0.8s ease-in;
 }
