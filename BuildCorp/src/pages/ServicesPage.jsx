@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import ServicesHeader from "../components/ServicesHeader";
 import ServicesDetail from "../components/ServicesDetail";
 import ServicesAudit from "../components/ServicesAudit";
-import StepsSection from "../components/StepsSection";
+import ServicesSteps from "../components/ServicesSteps";
 import Testimonials from "../components/Testimonials";
 import Chatbot from "../components/Chatbot";
 import "../styles/global.css";
@@ -16,7 +16,7 @@ function ServicesPage() {
       <ServicesHeader />
       <ServicesDetail />
       <ServicesAudit/ >
-      <StepsSection />
+      <ServicesSteps />
       <Testimonials />
       <Chatbot />
       <Footer />

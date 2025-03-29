@@ -1,4 +1,4 @@
-import "../styles/StepsSection.css";
+import "../styles/ServicesSteps.css"; 
 import slider1 from "../assets/slider1.jpg";
 import slider2 from "../assets/slider2.jpg";
 import slider3 from "../assets/slider3.jpg";
@@ -11,7 +11,7 @@ const steps = [
   { title: "Lancement & Maintenance", image: slider4 }
 ];
 
-const StepsSection = () => {
+const ServicesSteps = () => {
   return (
     <div className="wrapper">
       <h2>Les étapes de création de votre site</h2>
@@ -31,4 +31,4 @@ const StepsSection = () => {
   );
 };
 
-export default StepsSection;
+export default ServicesSteps;

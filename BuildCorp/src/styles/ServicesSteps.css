@@ -28,6 +28,14 @@
   justify-content: flex-end; /* Place le texte en bas */
   padding: 20px;
 }
+.description {
+  background: rgba(0, 0, 0, 0.5); /* fond noir semi-transparent */
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
 
 .card:hover {
   transform: scale(1.1);

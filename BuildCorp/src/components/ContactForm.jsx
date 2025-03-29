@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "../styles/ContactForm.css";
 import Navbar from "../components/Navbar";
 
-
 const ContactForm = () => {
   const [isFlipped, setIsFlipped] = useState(false);
 
