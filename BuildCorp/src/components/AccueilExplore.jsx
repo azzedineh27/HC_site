@@ -18,7 +18,7 @@ const AccueilExplore = () => {
           mesure à l'intégration d'applications complexes, notre expertise
           s'étend sur tous les domaines du digital.
         </p>
-        <a href="#" className="explore-btn">
+        <a href="/services" className="explore-btn">
           Explorer
         </a>
       </div>

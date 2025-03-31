@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
@@ -7,6 +8,8 @@ import ContactPage from "./pages/ContactPage";
 import "./styles/global.css";
 
 function App() {
+  const location = useLocation();
+
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />

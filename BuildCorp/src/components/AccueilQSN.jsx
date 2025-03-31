@@ -13,7 +13,7 @@ const AccueilQSN = () => {
           transformation numérique grâce à des technologies de pointe et des
           designs sur mesure.
         </p>
-        <a href="about.html" className="presentation-btn">
+        <a href="/services" className="presentation-btn">
           En savoir plus
         </a>
       </div>

@@ -212,12 +212,23 @@
   transition: background 0.3s ease, border 0.3s ease;
 }
 
+/* Style général des options */
+.quote-select option {
+  background-color: #002b4e;
+  color: white;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85em;
+}
+
+
 .quote-select:hover,
 .quote-select:focus {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid #00c6ff;
   cursor: pointer;
 }
+
 .form-front,
 .form-back {
   opacity: 0;

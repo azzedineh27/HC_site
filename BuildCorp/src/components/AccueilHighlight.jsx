@@ -13,8 +13,8 @@ const ProjectsSection = () => {
           soit des projets locaux ou internationaux, BuildCorp transforme les
           idées en réalité.
         </p>
-        <a href="projets.html" className="projects-btn">
-          Voir nos sites
+        <a href="/projets" className="projects-btn">
+          Voir nos réalisations
         </a>
       </div>
       <div className="projects-image">
