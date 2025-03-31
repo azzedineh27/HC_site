@@ -1,0 +1,69 @@
+.inspiration-section {
+  padding: 100px 30px;
+  text-align: center;
+  background: #0c1a2a;
+  color: white;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+
+.inspiration-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 198, 255, 0.2);
+}
+.inspiration-container {
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.inspiration-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1.5px solid transparent;
+  background: linear-gradient(135deg, #00c6ff, #0072ff) border-box;
+  mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.inspiration-container:hover {
+  transform: scale(1.05);
+}
+
+.inspiration-container:hover::after {
+  opacity: 1;
+}
+
+.inspiration-title {
+  font-size: 2.5em;
+  color: #00c6ff;
+  text-shadow: 0 0 12px rgba(0, 198, 255, 0.3);
+  margin-bottom: 30px;
+}
+
+.inspiration-quote {
+  font-size: 1.8em;
+  font-style: italic;
+  color: #e0f7ff;
+  margin: 0 0 20px;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+}
+
+.inspiration-subtext {
+  font-size: 1.1em;
+  color: #cfeaff;
+  margin-top: 10px;
+  line-height: 1.6;
+}

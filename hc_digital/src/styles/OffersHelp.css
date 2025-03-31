@@ -1,0 +1,41 @@
+.help-section {
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .help-title {
+    font-size: 2.4rem;
+    color: #00c6ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px rgba(0, 198, 255, 0.3);
+  }
+  
+  .help-text {
+    font-size: 1.1rem;
+    color: #c7e7ff;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  
+  .help-btn {
+    padding: 14px 30px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .help-btn:hover {
+    background: linear-gradient(90deg, #009ee2, #005fcb);
+    transform: scale(1.05);
+  }
+  

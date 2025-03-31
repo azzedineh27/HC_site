@@ -1,0 +1,125 @@
+/* ServicesHeader.css */
+
+  .services-header h1 {
+    font-size: 5em;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    margin-top: 100px;
+  }
+  
+  .services-header p {
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+  
+  .explorer {
+    position: relative;
+    display: inline-block;
+    color: white;
+    padding: 15px 40px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid white;
+    transition: color 0.3s ease, background 0.3s ease;
+    overflow: hidden;
+    margin-top: 25px;
+}
+
+.explorer span {
+    position: absolute;
+    display: block;
+    background: white;
+}
+
+/* Ligne horizontale en haut */
+.explorer span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    animation: animate1 2s linear infinite;
+}
+
+/* Ligne verticale à droite */
+.explorer span:nth-child(2) {
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/* Ligne horizontale en bas */
+.explorer span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    animation: animate3 2s linear infinite;
+}
+
+/* Ligne verticale à gauche */
+.explorer span:nth-child(4) {
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/* Animations */
+@keyframes animate1 {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes animate2 {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+@keyframes animate3 {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes animate4 {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+}
+
+/* Effet au survol */
+.explorer:hover {
+    color: black;
+}
+
+
+  #background-video {
+    position: fixed;  /* La vidéo reste en arrière-plan sur toute la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Assure qu'elle est bien derrière le contenu */
+}
+
+.services-header {
+    position: relative; /* Permet aux éléments à l’intérieur de rester visibles */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    transform: translateY(-90px); /* Déplace la section 50px plus haut */
+}
+
+nav, footer {
+    position: relative;
+    z-index: 100; /* Assure que la navbar et le footer restent au-dessus de la vidéo */
+}
