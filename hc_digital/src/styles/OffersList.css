@@ -96,3 +96,26 @@
     align-items: center;
   }
 }
+.offer-features {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 25px;
+  font-size: 0.95rem;
+  color: #c9d8e5;
+  text-align: left;
+}
+
+.offer-features li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.offer-features li::before {
+  content: "✔";
+  color: #00c6ff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.85rem;
+}

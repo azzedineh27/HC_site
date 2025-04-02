@@ -6,10 +6,10 @@
     font-family: "Poppins", sans-serif;
   }
   
-  /* Styles globaux */
   body, html {
     height: 100%;
     color: white;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* 🛡️ bloque les scrolls horizontaux indésirables */
   }
   

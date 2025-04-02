@@ -1,100 +1,54 @@
-/* === CONTENEUR PRINCIPAL === */
 .loading-screen {
   position: fixed;
   inset: 0;
+  background: radial-gradient(circle, #0f172a, #020617);
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  overflow: hidden;
   font-family: 'Poppins', sans-serif;
-  background-color: #0c1a2a;
-}
-
-/* === BLOBS ANIMÉS EN FOND === */
-.loading-screen::before,
-.loading-screen::after {
-  content: '';
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, #00c6ff33, transparent 70%);
-  filter: blur(120px);
-  animation: moveBlobs 15s infinite ease-in-out alternate;
-  z-index: 0;
-}
-
-.loading-screen::after {
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, #5da9e933, transparent 70%);
-  animation-delay: 5s;
-  left: auto;
-  right: 10%;
-  top: auto;
-  bottom: 20%;
-}
-
-@keyframes moveBlobs {
-  0% {
-    top: 10%;
-    left: 10%;
-    transform: scale(1);
-  }
-  100% {
-    top: 50%;
-    left: 50%;
-    transform: scale(1.2);
-  }
-}
-
-/* === CONTENU (loader, texte, bouton) === */
-.loading-content {
-  text-align: center;
-  z-index: 2;
+  flex-direction: column;
+  z-index: 9999;
   color: white;
-  backdrop-filter: blur(5px);
-  animation: fadeIn 1.2s ease-out;
 }
 
-/* === SPIRAL LOADER === */
-.spiral-loader {
-  width: 120px;
-  height: 120px;
-  border: 6px solid transparent;
-  border-top: 6px solid #00c6ff;
-  border-right: 6px solid #5da9e9;
-  border-radius: 50%;
-  animation: spinSpiral 1.2s linear infinite;
-  box-shadow: 0 0 25px #00c6ff, 0 0 60px #5da9e9;
-  margin: 0 auto;
+.icon-ring {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes spinSpiral {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(180deg) scale(1.15);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
+.icon-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
-/* === TEXTE DE LOADING === */
+.icon-constellation {
+  color: #00c6ff;
+  filter: drop-shadow(0 0 8px #00c6ff88);
+  transition: transform 0.3s ease;
+}
+
+.icon-constellation:hover {
+  transform: scale(1.2);
+  color: #5da9e9;
+}
+
 .loading-text {
   margin-top: 30px;
-  font-size: 1.4rem;
-  color: white;
-  text-shadow: 0 0 10px #00c6ff;
+  font-size: 1.1rem;
   letter-spacing: 1px;
+  text-shadow: 0 0 10px #00c6ff55;
+  z-index: 2;
 }
 
-/* === BOUTON SKIP === */
 .skip-button {
   margin-top: 20px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid #00c6ff;
   color: #00c6ff;
@@ -103,23 +57,88 @@
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(3px);
+  z-index: 2;
 }
 
 .skip-button:hover {
   background-color: #00c6ff;
-  color: #0c1a2a;
+  color: #0f172a;
   transform: scale(1.05);
   box-shadow: 0 0 12px #00c6ff;
 }
+/* === ANIMATION DE FOND BLUR PULSE === */
+.blur-background {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, #00c6ff22, transparent 60%);
+  filter: blur(100px);
+  animation: pulseBlur 10s ease-in-out infinite;
+  z-index: 0;
+}
 
-/* === ENTRÉE DU CONTENU === */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
+@keyframes pulseBlur {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+}
+@media (max-width: 768px) {
+  .icon-ring {
+    width: 180px;
+    height: 180px;
+  }
+
+  .icon-constellation {
+    width: 22px;
+    height: 22px;
+  }
+
+  .loading-text {
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .skip-button {
+    font-size: 0.85rem;
+    padding: 6px 18px;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-ring {
+    width: 140px;
+    height: 140px;
+  }
+
+  .icon-constellation {
+    width: 20px;
+    height: 20px;
+  }
+
+  .loading-text {
+    font-size: 0.95rem;
+    margin-top: 70px;
+  }
+
+  .skip-button {
+    font-size: 0.8rem;
+    padding: 5px 16px;
+    margin-top: 20px;
+  }
+}
+.icon-container {
+  margin-bottom: 30px; /* Espace entre le cercle et le texte */
+}
+
+@media (max-width: 480px) {
+  .icon-container {
+    margin-bottom: 60px; /* Plus d’espace sur mobile */
   }
 }

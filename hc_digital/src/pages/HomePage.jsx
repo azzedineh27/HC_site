@@ -36,8 +36,8 @@ function HomePage() {
       <AccueilFront />
       <AccueilQSN />
       <AccueilExplore />
+      <AccueilOffres />      
       <AccueilHighlight />
-      <AccueilOffres />
       <AccueilInspiration />
       <Chatbot />
       <Footer />

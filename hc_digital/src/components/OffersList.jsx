@@ -6,28 +6,43 @@ const offers = [
   {
     title: "Starter",
     icon: <FaRocket className="offer-icon" />,
-    price: "29€/mois",
-    description: "Pour les petites entreprises en démarrage",
-    button: "Sélectionner",
+    description: "Une base solide pour démarrer votre projet digital.",
+    features: [
+      "Site vitrine 3 pages",
+      "Formulaire de contact",
+      "Design responsive",
+    ],
+    button: "Demander un devis",
     highlight: false,
   },
   {
     title: "Pro",
     icon: <FaGem className="offer-icon" />,
-    price: "59€/mois",
-    description: "Pour les entreprises en croissance",
-    button: "Sélectionner",
+    description: "Pensé pour les entreprises en pleine croissance.",
+    features: [
+      "Site complet jusqu’à 10 pages",
+      "Blog / CMS intégré",
+      "Optimisation SEO",
+      "Maintenance 3 mois incluse",
+    ],
+    button: "Demander un devis",
     highlight: true,
   },
   {
     title: "Sur-mesure",
     icon: <FaStar className="offer-icon" />,
-    price: "Contactez-nous",
-    description: "Pour une solution personnalisée et adaptée",
-    button: "Nous contacter",
+    description: "Une solution taillée pour vos besoins spécifiques.",
+    features: [
+      "Cahier des charges personnalisé",
+      "Fonctionnalités sur demande",
+      "Accompagnement UX/UI",
+      "Devis sur mesure",
+    ],
+    button: "Demander un devis",
     highlight: false,
   },
 ];
+
 
 const OffersList = () => {
   return (
@@ -44,8 +59,13 @@ const OffersList = () => {
           >
             {offer.icon}
             <h2 className="offer-title">{offer.title}</h2>
-            <p className="offer-price">{offer.price}</p>
             <p className="offer-description">{offer.description}</p>
+              <ul className="offer-features">
+                {offer.features && offer.features.map((feature, i) => (
+                  <li key={i}>{feature}</li>
+                ))}
+              </ul>
+
             <button className={`offer-btn ${offer.title === "Sur-mesure" ? "secondary" : ""}`}>
               {offer.button}
             </button>

@@ -1,6 +1,6 @@
 import OffersHeader from "../components/OffersHeader";
 import OffersList from "../components/OffersList";
-import OffersComparison from "../components/OffersComparaison";
+import OffersQuiz from "../components/OffersQuiz";
 import OffersHelp from "../components/OffersHelp";
 import OffersProducts from "../components/OffersProducts";
 import Chatbot from "../components/Chatbot";
@@ -16,7 +16,7 @@ const OffersPage = () => {
       <OffersHeader />
       <OffersList />
       <OffersProducts />
-      <OffersComparison />
+      <OffersQuiz />
       <OffersHelp />
       <Chatbot/>
       <Footer/>
