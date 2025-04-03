@@ -5,6 +5,9 @@
   ;
   color: white;
   overflow: hidden;
+
+  display: flex;                /* 👈 Ajouté */
+  padding-left : 120px; 
 }
 
 /* Texte en arrière-plan */
@@ -25,7 +28,7 @@
   position: relative; /* Place le contenu au-dessus du texte */
   max-width: 600px;
   z-index: 1; /* S'assure que le texte principal reste devant */
-  padding-left: 20px;
+  padding-left: 0;
 }
 
 .explore-title {
@@ -53,4 +56,25 @@
 .explore-btn:hover {
   background-color: white;
   color: black;
+}
+@media (max-width: 768px) {
+  .explore-section {
+    flex-direction: column;
+    padding: 60px 20px;
+    padding-left: 20px; /* 👈 override du padding de 120px */
+    text-align: center;
+  }
+
+  .explore-content {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .explore-title {
+    font-size: 2em;
+  }
+
+  .explore-text {
+    font-size: 1em;
+  }
 }

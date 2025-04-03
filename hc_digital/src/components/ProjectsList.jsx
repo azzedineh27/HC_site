@@ -3,10 +3,11 @@ import { useState } from "react";
 import ProjectLightbox from "./ProjectLightbox";
 
 const projects = [
-  { src: "./src/assets/projects_img.png", alt: "Projet 1" },
-  { src: "./src/assets/FA_image.png", alt: "Projet 2" },
-  { src: "./src/assets/outil_renta.png", alt: "Projet 3" },
-  { src: "./src/assets/idrymen_image.png", alt: "Projet 4" },
+  { src: "./src/assets/FA_image.png", alt: "Projet 1" },
+  { src: "./src/assets/outil_renta.png", alt: "Projet 2" },
+  { src: "./src/assets/idrymen_image.png", alt: "Projet 3" },
+  { src: "./src/assets/etudeplus_project.png", alt: "Projet 4" },
+  { src: "./src/assets/coming_soon.png", alt: "Coming Soon" },
 ];
 
 const ProjectsList = () => {

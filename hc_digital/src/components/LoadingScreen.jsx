@@ -32,16 +32,17 @@ const LoadingScreen = ({ onFinish }) => {
   const [explode, setExplode] = useState(false);
 
   useEffect(() => {
-    const startIcons = setTimeout(() => setShowIcons(true), 400);
-    const startExplosion = setTimeout(() => setExplode(true), 3500);
-    const finish = setTimeout(onFinish, 5000);
-
+    const startIcons = setTimeout(() => setShowIcons(true), 200);     // avant : 400
+    const startExplosion = setTimeout(() => setExplode(true), 2000);  // avant : 3500
+    const finish = setTimeout(onFinish, 3000);                         // avant : 5000
+  
     return () => {
       clearTimeout(startIcons);
       clearTimeout(startExplosion);
       clearTimeout(finish);
     };
   }, [onFinish]);
+  
 
   return (
     <div className="loading-screen">
@@ -68,10 +69,10 @@ const LoadingScreen = ({ onFinish }) => {
                     : { opacity: 0, scale: 0 }
                 }
                 transition={{
-                  delay: index * 0.08,
-                  duration: 0.6,
+                  delay: index * 0.05,     // avant : 0.08
+                  duration: 0.4,           // avant : 0.6
                   ease: "easeInOut",
-                }}
+                }}                
               >
                 <Icon size={28} className="icon-constellation" />
               </motion.div>
@@ -85,7 +86,7 @@ const LoadingScreen = ({ onFinish }) => {
           className="loading-text"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
         >
           Lancement de votre univers numérique...
         </motion.p>
@@ -97,7 +98,7 @@ const LoadingScreen = ({ onFinish }) => {
           onClick={onFinish}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.4, delay: 0.05 }}
         >
           Skip
         </motion.button>

@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import Chatbot from "../components/Chatbot";
 import LoadingScreen from "../components/LoadingScreen";
 import "../styles/global.css";
+import "../styles/AccueilPage.css";
 
 function HomePage() {
   const [isLoading, setIsLoading] = useState(false);

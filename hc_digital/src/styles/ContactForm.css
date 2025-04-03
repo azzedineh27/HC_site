@@ -197,37 +197,6 @@
   background: #00c6ff;
   color: #000;
 }
-.quote-select {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 18px;
-  background: rgba(255, 255, 255, 0.08);
-  color: white;
-  font-size: 0.85em;
-  border: none;
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  appearance: none;
-  outline: none;
-  transition: background 0.3s ease, border 0.3s ease;
-}
-
-/* Style général des options */
-.quote-select option {
-  background-color: #002b4e;
-  color: white;
-  padding: 10px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.85em;
-}
-
-
-.quote-select:hover,
-.quote-select:focus {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid #00c6ff;
-  cursor: pointer;
-}
 
 .form-front,
 .form-back {
@@ -248,4 +217,42 @@
 
 .form-front.loaded {
   animation: fadeIn 0.8s ease-in;
+}
+.contact-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 0.85em;
+  backdrop-filter: blur(6px);
+  appearance: none;
+  outline: none;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.contact-form select:hover,
+.contact-form select:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid #00c6ff;
+  cursor: pointer;
+}
+
+.contact-form select option {
+  background-color: #002b4e;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+/* Placeholder blanc pour input et textarea */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: white;
+  opacity: 1; /* Firefox support */
+}
+
+/* Option placeholder pour le select */
+.contact-form select option[value=""] {
+  color: white;
 }

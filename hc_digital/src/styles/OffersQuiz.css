@@ -82,13 +82,26 @@
 }
 
 .quiz-restart {
-  background: none;
-  border: none;
-  color: #88cfff;
+  display: inline-block;
   margin-top: 20px;
-  text-decoration: underline;
+  padding: 10px 24px;
+  border: 1px solid #88cfff;
+  border-radius: 25px;
+  background-color: transparent;
+  color: #88cfff;
+  font-weight: 500;
   cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(3px);
 }
+
+.quiz-restart:hover {
+  background-color: #88cfff;
+  color: #0c1a2a;
+  box-shadow: 0 0 10px #88cfff55;
+  transform: translateY(-2px);
+}
+
 .quiz-header {
   display: flex;
   align-items: center;

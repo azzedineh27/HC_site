@@ -1,3 +1,4 @@
+// ... imports
 import React, { useState, useEffect } from "react";
 import "../styles/ContactForm.css";
 import Navbar from "../components/Navbar";
@@ -16,18 +17,17 @@ const ContactForm = () => {
     name: "",
     email: "",
     formula: "",
+    feature: "",
     budget: "",
     details: "",
-  });  
+  });
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       document.querySelector(".form-front")?.classList.add("loaded");
-    }, 50); // petit délai pour que le DOM soit prêt
-  
+    }, 50);
     return () => clearTimeout(timeout);
   }, []);
-  
 
   const handleContactChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -55,7 +55,7 @@ const ContactForm = () => {
             {isFlipped ? "Nous Contacter" : "Demander un Devis"}
           </button>
         </div>
-  
+
         {/* ✅ Flip container */}
         <div className={`form-flip-container ${isFlipped ? "flipped" : ""}`}>
           <div className="form-inner">
@@ -94,7 +94,7 @@ const ContactForm = () => {
               />
               <button type="submit" className="contact-button">Envoyer</button>
             </form>
-  
+
             {/* Face arrière - Devis */}
             <form onSubmit={handleSubmit} className="contact-form form-back">
               <h2 className="contact-title">Demande de Devis</h2>
@@ -113,18 +113,20 @@ const ContactForm = () => {
                 onChange={handleQuoteChange}
                 required
               />
+
+              {/* ✅ Sélecteur de formule */}
               <select
                 name="formula"
                 value={quoteData.formula}
                 onChange={handleQuoteChange}
-                className="quote-select"
                 required
               >
-                <option value="">Choisissez une formule</option>
+                <option value="" disabled>Choisissez une formule</option>
                 <option value="standard">Standard</option>
                 <option value="pro">Pro</option>
                 <option value="surmesure">Sur-mesure</option>
               </select>
+
               <textarea
                 name="details"
                 placeholder="Détails"
@@ -141,4 +143,5 @@ const ContactForm = () => {
     </div>
   );
 };
+
 export default ContactForm;

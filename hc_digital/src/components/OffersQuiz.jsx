@@ -5,27 +5,43 @@ import "../styles/OffersQuiz.css";
 
 const questions = [
   {
-    question: "Quel est votre besoin principal ?",
+    question: "Pourquoi souhaitez-vous un site web ?",
     options: [
-      { label: "Créer un site simple et rapide", value: "starter" },
-      { label: "Développer une solution évolutive", value: "pro" },
-      { label: "Obtenir une solution totalement personnalisée", value: "surmesure" },
+      { label: "Pour avoir une présence en ligne rapidement", value: "starter" },
+      { label: "Pour développer mon activité / vendre mes services", value: "pro" },
+      { label: "Pour proposer une expérience digitale unique et impactante", value: "surmesure" },
     ],
   },
   {
-    question: "Quel est votre niveau de maturité numérique ?",
+    question: "Votre entreprise est…",
     options: [
-      { label: "Débutant", value: "starter" },
-      { label: "Intermédiaire", value: "pro" },
-      { label: "Avancé / Expert", value: "surmesure" },
+      { label: "En création ou très jeune", value: "starter" },
+      { label: "En développement actif", value: "pro" },
+      { label: "Bien installée avec des besoins avancés", value: "surmesure" },
     ],
   },
   {
-    question: "À quelle vitesse souhaitez-vous lancer le projet ?",
+    question: "Avez-vous besoin de fonctionnalités spécifiques ?",
     options: [
-      { label: "Le plus vite possible", value: "starter" },
-      { label: "Dans 1 à 2 mois", value: "pro" },
-      { label: "Quand tout est parfaitement cadré", value: "surmesure" },
+      { label: "Juste du contenu", value: "starter" },
+      { label: "Blog, formulaire, newsletter", value: "pro" },
+      { label: "Paiement en ligne, CRM, espace client, etc.", value: "surmesure" },
+    ],
+  },
+  {
+    question: "Quel est votre délai idéal ?",
+    options: [
+      { label: "Moins d’un mois", value: "starter" },
+      { label: "1 à 2 mois", value: "pro" },
+      { label: "+ de 2 mois, avec phase de cadrage", value: "surmesure" },
+    ],
+  },
+  {
+    question: "Votre cible est plutôt…",
+    options: [
+      { label: "Locale / régionale", value: "starter" },
+      { label: "Nationale", value: "pro" },
+      { label: "Internationale", value: "surmesure" },
     ],
   },
 ];

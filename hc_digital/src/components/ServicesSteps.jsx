@@ -18,11 +18,8 @@ const ServicesSteps = () => {
       <div className="container">
         {steps.map((step, index) => (
           <div key={index} className="card" style={{ backgroundImage: `url(${step.image})` }}>
-            <div className="row">
-              <div className="icon">{index + 1}</div>
-              <div className="description">
-                <h4>{step.title}</h4>
-              </div>
+            <div className="description">
+              <h4>{index + 1}. {step.title}</h4>
             </div>
           </div>
         ))}
