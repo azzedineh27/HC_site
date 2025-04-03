@@ -1,70 +1,14 @@
-// 📁 src/components/OffersQuiz.jsx
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles/OffersQuiz.css";
 
-const questions = [
-  {
-    question: "Pourquoi souhaitez-vous un site web ?",
-    options: [
-      { label: "Pour avoir une présence en ligne rapidement", value: "starter" },
-      { label: "Pour développer mon activité / vendre mes services", value: "pro" },
-      { label: "Pour proposer une expérience digitale unique et impactante", value: "surmesure" },
-    ],
-  },
-  {
-    question: "Votre entreprise est…",
-    options: [
-      { label: "En création ou très jeune", value: "starter" },
-      { label: "En développement actif", value: "pro" },
-      { label: "Bien installée avec des besoins avancés", value: "surmesure" },
-    ],
-  },
-  {
-    question: "Avez-vous besoin de fonctionnalités spécifiques ?",
-    options: [
-      { label: "Juste du contenu", value: "starter" },
-      { label: "Blog, formulaire, newsletter", value: "pro" },
-      { label: "Paiement en ligne, CRM, espace client, etc.", value: "surmesure" },
-    ],
-  },
-  {
-    question: "Quel est votre délai idéal ?",
-    options: [
-      { label: "Moins d’un mois", value: "starter" },
-      { label: "1 à 2 mois", value: "pro" },
-      { label: "+ de 2 mois, avec phase de cadrage", value: "surmesure" },
-    ],
-  },
-  {
-    question: "Votre cible est plutôt…",
-    options: [
-      { label: "Locale / régionale", value: "starter" },
-      { label: "Nationale", value: "pro" },
-      { label: "Internationale", value: "surmesure" },
-    ],
-  },
-];
-
-const resultMap = {
-  starter: {
-    title: "Formule Starter",
-    description: "Idéal pour vous lancer rapidement avec l’essentiel.",
-    link: "/offres#starter",
-  },
-  pro: {
-    title: "Formule Pro",
-    description: "Pensé pour les projets sérieux en pleine croissance.",
-    link: "/offres#pro",
-  },
-  surmesure: {
-    title: "Formule Sur-Mesure",
-    description: "Parfait si vous avez besoin d’un projet 100% personnalisé.",
-    link: "/offres#surmesure",
-  },
-};
-
 const OffersQuiz = () => {
+  const { t } = useTranslation();
+
+  const questions = t("offersQuiz.questions", { returnObjects: true });
+  const resultData = t("offersQuiz.result", { returnObjects: true });
+
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [result, setResult] = useState(null);
@@ -75,11 +19,10 @@ const OffersQuiz = () => {
       setAnswers(updatedAnswers);
       setStep(step + 1);
     } else {
-      // Calcule le résultat
       const count = { starter: 0, pro: 0, surmesure: 0 };
       updatedAnswers.forEach((val) => count[val]++);
       const max = Object.entries(count).reduce((a, b) => (a[1] > b[1] ? a : b));
-      setResult(resultMap[max[0]]);
+      setResult(resultData[max[0]]);
     }
   };
 
@@ -94,7 +37,7 @@ const OffersQuiz = () => {
       <div className="quiz-container">
         <div className="quiz-header">
           <span className="quiz-icon">🧭</span>
-          <h1 className="quiz-title">Quel pack est fait pour vous ?</h1>
+          <h1 className="quiz-title">{t("offersQuiz.title")}</h1>
         </div>
 
         <AnimatePresence mode="wait">
@@ -109,13 +52,18 @@ const OffersQuiz = () => {
             >
               <h2 className="quiz-question">{questions[step].question}</h2>
               <div className="quiz-options">
-                {questions[step].options.map((opt, idx) => (
-                  <button key={idx} className="quiz-option-btn" onClick={() => handleSelect(opt.value)}>
-                    {opt.label}
-                  </button>
-                ))}
+                {questions[step].options.map((label, idx) => {
+                  const value = ["starter", "pro", "surmesure"][idx];
+                  return (
+                    <button key={idx} className="quiz-option-btn" onClick={() => handleSelect(value)}>
+                      {label}
+                    </button>
+                  );
+                })}
               </div>
-              <p className="quiz-progress">Question {step + 1} / {questions.length}</p>
+              <p className="quiz-progress">
+                {t("offersQuiz.progress", { current: step + 1, total: questions.length })}
+              </p>
             </motion.div>
           ) : (
             <motion.div
@@ -127,8 +75,12 @@ const OffersQuiz = () => {
             >
               <h2 className="quiz-result-title">{result.title}</h2>
               <p className="quiz-result-desc">{result.description}</p>
-              <a href="#offers-section" className="quiz-btn">Voir l’offre</a>
-              <button className="quiz-restart" onClick={resetQuiz}>Recommencer</button>
+              <a href="#offers-section" className="quiz-btn">
+                {t("offersQuiz.result.button")}
+              </a>
+              <button className="quiz-restart" onClick={resetQuiz}>
+                {t("offersQuiz.result.restart")}
+              </button>
             </motion.div>
           )}
         </AnimatePresence>

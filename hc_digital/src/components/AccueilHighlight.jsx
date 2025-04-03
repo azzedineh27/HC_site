@@ -1,20 +1,18 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "../styles/AccueilHighlight.css";
-import projetImage from "../assets/projet.jpg"; // Import correct de l'image
+import projetImage from "../assets/projet.jpg";
 
 const ProjectsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="projects-highlight-section">
       <div className="projects-content">
-        <h2 className="projects-title">Découvrez nos Réalisations</h2>
-        <p className="projects-text">
-          Explorez nos projets les plus impressionnants, où chaque réalisation
-          reflète notre expertise et notre passion pour l'innovation. Que ce
-          soit des projets locaux ou internationaux, HC Digital transforme les
-          idées en réalité.
-        </p>
+        <h2 className="projects-title">{t("accueilHighlight.title")}</h2>
+        <p className="projects-text">{t("accueilHighlight.text")}</p>
         <a href="/projets" className="projects-btn">
-          Voir nos réalisations
+          {t("accueilHighlight.button")}
         </a>
       </div>
       <div className="projects-image">

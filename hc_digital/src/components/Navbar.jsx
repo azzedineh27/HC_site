@@ -1,16 +1,18 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
   const [showLangMenu, setShowLangMenu] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
-  const toggleLangMenu = () => {
-    setShowLangMenu((prev) => !prev);
-  };
+  const toggleLangMenu = () => setShowLangMenu((prev) => !prev);
+  const toggleMobileMenu = () => setMenuOpen(!menuOpen);
 
-  const toggleMobileMenu = () => {
-    setMenuOpen(!menuOpen);
+  const changeLang = (lng) => {
+    i18n.changeLanguage(lng);
+    setShowLangMenu(false);
   };
 
   return (
@@ -21,23 +23,23 @@ const Navbar = () => {
         </div>
 
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <a href="/" className="nav-link">Accueil</a>
-          <a href="/services" className="nav-link">Services</a>
-          <a href="/offres" className="nav-link">Offres</a>
-          <a href="/projets" className="nav-link">Projets</a>
-          <a href="/contact" className="nav-link">Contact</a>
+          <a href="/" className="nav-link">{t("navbar.home")}</a>
+          <a href="/services" className="nav-link">{t("navbar.services")}</a>
+          <a href="/offres" className="nav-link">{t("navbar.offres")}</a>
+          <a href="/projets" className="nav-link">{t("navbar.projets")}</a>
+          <a href="/contact" className="nav-link">{t("navbar.contact")}</a>
         </div>
 
         <div className="language-dropdown">
           <button className="lang-btn" onClick={toggleLangMenu}>
-            FR <span style={{ fontSize: "0.8em" }}>▼</span>
+            {i18n.language.toUpperCase()} <span style={{ fontSize: "0.8em" }}>▼</span>
           </button>
 
           {showLangMenu && (
             <ul className="lang-menu">
-              <li className="lang-item"><a href="#" className="lang-option">🇫🇷 Français</a></li>
-              <li className="lang-item"><a href="#" className="lang-option">🇬🇧 English</a></li>
-              <li className="lang-item"><a href="#" className="lang-option">🇪🇸 Español</a></li>
+              <li className="lang-item"><span className="lang-option" onClick={() => changeLang("fr")}>🇫🇷 Français</span></li>
+              <li className="lang-item"><span className="lang-option" onClick={() => changeLang("en")}>🇬🇧 English</span></li>
+              <li className="lang-item"><span className="lang-option" onClick={() => changeLang("es")}>🇪🇸 Español</span></li>
             </ul>
           )}
         </div>

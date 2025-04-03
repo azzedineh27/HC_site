@@ -1,13 +1,14 @@
 import "../styles/OffersHelp.css";
+import { useTranslation } from "react-i18next";
 
 const OffersHelp = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="help-section">
-      <h2 className="help-title">Vous hésitez ? On vous aide !</h2>
-      <p className="help-text">
-        Jetez un oeil au chatbot à droite, ou dites-nous ce que vous recherchez et on vous oriente vers l'offre la plus adaptée.
-      </p>
-      <a href="/contact" className="help-btn">Discutons ensemble</a>
+      <h2 className="help-title">{t("offersHelp.title")}</h2>
+      <p className="help-text">{t("offersHelp.text")}</p>
+      <a href="/contact" className="help-btn">{t("offersHelp.button")}</a>
     </section>
   );
 };

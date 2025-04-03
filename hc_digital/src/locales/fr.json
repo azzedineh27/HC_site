@@ -1,14 +1,374 @@
 {
-    "navbar": {
-      "home": "Accueil",
-      "services": "Services",
-      "offers": "Offres",
-      "projects": "Projets",
+  "accueilHeader": {
+    "title": "HC Digital",
+    "subtitle": "L'innovation digitale au service de votre entreprise",
+    "button": "Explorer ↓"
+  },
+  "accueilExplore": {
+    "bgText": "Création",
+    "title": "Explorez notre univers",
+    "description": "Chez HC Digital, nous mettons un point d'honneur à créer des solutions numériques innovantes. Que vous soyez un candidat curieux ou un client à la recherche de partenariats, découvrez un monde où la technologie rencontre l'innovation. De la conception de sites web sur mesure à l'intégration d'applications complexes, notre expertise s'étend sur tous les domaines du digital.",
+    "button": "Explorer"
+  },
+  "accueilHighlight": {
+    "title": "Découvrez nos Réalisations",
+    "text": "Explorez nos projets les plus impressionnants, où chaque réalisation reflète notre expertise et notre passion pour l'innovation. Que ce soit des projets locaux ou internationaux, HC Digital transforme les idées en réalité.",
+    "button": "Voir nos réalisations"
+  },
+  "accueilInspiration": {
+    "title": "Notre Vision",
+    "quote": "\"Le futur appartient à ceux qui osent l'imaginer.\"",
+    "subtext": "Avec HC Digital, l’innovation n’attend pas demain."
+  },
+  "accueilOffres": {
+    "title": "Des offres pensées pour vous",
+    "text": "Que vous soyez une startup, une PME ou une grande entreprise, nos services s’adaptent à vos ambitions. Chaque offre est pensée pour allier performance, clarté et personnalisation.",
+    "button": "Voir nos offres",
+    "cards": {
+      "site": "Site Vitrine",
+      "app": "App sur mesure",
+      "infra": "Infrastructure",
+      "mobile": "Mobile & UX"
+    }
+  },
+  "accueilQSN": {
+    "title": "Qui sommes-nous ?",
+    "text": "HC Digital est une entreprise de solutions digitales qui repousse les limites de l'innovation et de la créativité. Depuis notre création, nous avons accompagné des entreprises de toutes tailles dans leur transformation numérique grâce à des technologies de pointe et des designs sur mesure.",
+    "button": "En savoir plus"
+  },
+  "chatbot": {
+    "greeting": "Bonjour ! Comment puis-je vous aider ?",
+    "questions": [
+      "Quels sont vos services ?",
+      "Comment vous contacter ?",
+      "Quels sont vos tarifs ?",
+      "Avez-vous des références ?"
+    ],
+    "responses": {
+      "Quels sont vos services ?": "Nous proposons du développement web, du design UX/UI, du SEO et de la maintenance.",
+      "Comment vous contacter ?": "Contactez-nous via notre formulaire de contact ou par email à contact@HC Digital.com.",
+      "Quels sont vos tarifs ?": "Nos tarifs varient selon les projets. Contactez-nous pour un devis personnalisé.",
+      "Avez-vous des références ?": "Oui ! Consultez nos réalisations dans la section 'Nos Projets'."
+    },
+    "fallback": "❓ Vous n'avez pas trouvé ce que vous cherchez ?",
+    "contactLink": "Contactez-nous !"
+  },
+
+  "contact": {
+    "title": "Restons connectés",
+    "subtitle": "Une idée, un projet ou besoin d’un devis ?",
+    "buttonFlipToQuote": "Demander un Devis",
+    "buttonFlipToContact": "Nous Contacter",
+    "form": {
+      "title": "Contactez-nous",
+      "name": "Nom complet",
+      "email": "Email",
+      "tel": "Téléphone",
+      "message": "Message",
+      "send": "Envoyer"
+    },
+    "quote": {
+      "title": "Demande de Devis",
+      "company": "Nom de l'entreprise",
+      "formulaPlaceholder": "Choisissez une formule",
+      "formulas": {
+        "standard": "Standard",
+        "pro": "Pro",
+        "surmesure": "Sur-mesure"
+      },
+      "details": "Détails"
+    },
+    "success": "Message envoyé avec succès !"
+  },
+
+  "devis": {
+    "title": "Demandez Votre Devis",
+    "name": "Nom :",
+    "email": "Email :",
+    "siteType": "Type de site :",
+    "types": {
+      "standard": "Site Standard",
+      "medium": "Site Medium",
+      "premium": "Site Premium"
+    },
+    "features": "Sujet du site et description :",
+    "featuresPlaceholder": "Description du site (couleurs, formes, utilité etc..)",
+    "send": "Envoyer"
+  },
+
+  "footer": {
+    "slogan": "Innover pour un avenir digital.",
+    "links": {
+      "title": "Liens Rapides",
+      "offres": "Nos Offres",
+      "projets": "Nos Projets",
       "contact": "Contact"
     },
-    "header": {
-      "title": "Bienvenue sur BuildCorp",
-      "description": "Nous vous accompagnons dans votre transformation digitale."
-    }
-  }
+    "social": {
+      "title": "Suivez-nous"
+    },
+    "app": {
+      "title": "Notre Application",
+      "text": "Téléchargez notre application sur votre mobile pour une meilleure expérience."
+    },
+    "copyright": "© 2024 HC Digital. Tous droits réservés."
+  },
+
+  "navbar": {
+    "home": "Accueil",
+    "services": "Services",
+    "offres": "Offres",
+    "projets": "Projets",
+    "contact": "Contact"
+  },
+
+  "loading": {
+    "text": "Lancement de votre univers numérique...",
+    "skip": "Skip"
+  },
+  "offersHeader": {
+      "title": "Nos Offres",
+      "subtitle": "Des solutions adaptées à chaque projet, du lancement à la performance.",
+      "button": "↓ Découvrir nos formules"
+    },
+    "offersHelp": {
+      "title": "Vous hésitez ? On vous aide !",
+      "text": "Jetez un oeil au chatbot à droite, ou dites-nous ce que vous recherchez et on vous oriente vers l'offre la plus adaptée.",
+      "button": "Discutons ensemble"
+    },
+    "offersList": {
+      "title": "Nos Formules",
+      "subtitle": "Choisissez la formule qui vous convient et faites passer votre entreprise au niveau supérieur.",
+      "offers": {
+        "starter": {
+          "title": "Starter",
+          "description": "Une base solide pour démarrer votre projet digital.",
+          "features": [
+            "Site vitrine 3 pages",
+            "Formulaire de contact",
+            "Design responsive"
+          ],
+          "button": "Demander un devis"
+        },
+        "pro": {
+          "title": "Pro",
+          "description": "Pensé pour les entreprises en pleine croissance.",
+          "features": [
+            "Site complet jusqu’à 10 pages",
+            "Blog / CMS intégré",
+            "Optimisation SEO",
+            "Maintenance 3 mois incluse"
+          ],
+          "button": "Demander un devis"
+        },
+        "surmesure": {
+          "title": "Sur-mesure",
+          "description": "Une solution taillée pour vos besoins spécifiques.",
+          "features": [
+            "Cahier des charges personnalisé",
+            "Fonctionnalités sur demande",
+            "Accompagnement UX/UI",
+            "Devis sur mesure"
+          ],
+          "button": "Demander un devis"
+        }
+      }
+    },
+    "offersProducts": {
+      "title": "Produits en plus",
+      "subtitle": "Découvrez nos outils complémentaires pour booster votre productivité.",
+      "products": [
+        {
+          "title": "Application Mobile",
+          "description": "Profitez de notre expertise pour créer des applications mobiles modernes et efficaces",
+          "icon": "📱"
+        },
+        {
+          "title": "Outil de Visualisation",
+          "description": "Suivez vos statistiques en temps réel avec notre tableau de bord interactif.",
+          "icon": "📊"
+        },
+        {
+          "title": "Assistants Chatbot",
+          "description": "Bénéficiez d’une aide intelligente pour vos décisions stratégiques.",
+          "icon": "🤖"
+        }
+      ]
+    },
+    "offersQuiz": {
+      "title": "Quel pack est fait pour vous ?",
+      "questions": [
+        {
+          "question": "Pourquoi souhaitez-vous un site web ?",
+          "options": [
+            "Pour avoir une présence en ligne rapidement",
+            "Pour développer mon activité / vendre mes services",
+            "Pour proposer une expérience digitale unique et impactante"
+          ]
+        },
+        {
+          "question": "Votre entreprise est…",
+          "options": [
+            "En création ou très jeune",
+            "En développement actif",
+            "Bien installée avec des besoins avancés"
+          ]
+        },
+        {
+          "question": "Avez-vous besoin de fonctionnalités spécifiques ?",
+          "options": [
+            "Juste du contenu",
+            "Blog, formulaire, newsletter",
+            "Paiement en ligne, CRM, espace client, etc."
+          ]
+        },
+        {
+          "question": "Quel est votre délai idéal ?",
+          "options": [
+            "Moins d’un mois",
+            "1 à 2 mois",
+            "+ de 2 mois, avec phase de cadrage"
+          ]
+        },
+        {
+          "question": "Votre cible est plutôt…",
+          "options": [
+            "Locale / régionale",
+            "Nationale",
+            "Internationale"
+          ]
+        }
+      ],
+      "result": {
+        "starter": {
+          "title": "Formule Starter",
+          "description": "Idéal pour vous lancer rapidement avec l’essentiel."
+        },
+        "pro": {
+          "title": "Formule Pro",
+          "description": "Pensé pour les projets sérieux en pleine croissance."
+        },
+        "surmesure": {
+          "title": "Formule Sur-Mesure",
+          "description": "Parfait si vous avez besoin d’un projet 100% personnalisé."
+        },
+        "button": "Voir l’offre",
+        "restart": "Recommencer"
+      },
+      "progress": "Question {{current}} / {{total}}"
+    },
+      "projectsHeader": {
+        "title": "Découvrez notre parcours",
+        "text": "Explorez les projets qui ont façonné notre histoire et notre expertise.",
+        "button": "Voir nos projets"
+      },
+      "projectsChiffres": {
+        "title": "Nos chiffres clés",
+        "cards": [
+          { "value": "+500", "text": "Projets réalisés" },
+          { "value": "+300", "text": "Clients satisfaits" },
+          { "value": "5", "text": "Pays couverts" },
+          { "value": "+10", "text": "Années d'expérience" }
+        ]
+      },
+      "projectsTimeline": {
+        "title": "L'Évolution de HC Digital",
+        "events": [
+          {
+            "year": "2018",
+            "title": "Création de HC Digital",
+            "description": "Naissance de HC Digital avec une vision d'innovation technologique."
+          },
+          {
+            "year": "2020",
+            "title": "Premier Grand Projet",
+            "description": "Nous avons collaboré avec une startup pour développer une plateforme SaaS."
+          },
+          {
+            "year": "2022",
+            "title": "Expansion Internationale",
+            "description": "Ouverture de notre premier bureau à l'étranger et croissance de notre équipe."
+          },
+          {
+            "year": "2024",
+            "title": "Innovation & IA",
+            "description": "Intégration de l'Intelligence Artificielle dans nos solutions pour optimiser les performances."
+          }
+        ]
+      },
+      "projectsList": {
+        "title": "Nos Projets Réalisés",
+        "images": [
+          { "alt": "Projet 1" },
+          { "alt": "Projet 2" },
+          { "alt": "Projet 3" },
+          { "alt": "Projet 4" },
+          { "alt": "Coming Soon" }
+        ]
+      },
+      "lightbox": {
+        "alt": "Aperçu du projet",
+        "prev": "Précédent",
+        "next": "Suivant"
+      },
+        "servicesHeader": {
+          "title": "Nos Services",
+          "subtitle": "Découvrez comment HC Digital peut propulser votre entreprise avec des solutions digitales sur-mesure",
+          "button": "Explorer"
+        },
+        "servicesDetail": {
+          "title": "Nos Services en Détail",
+          "items": [
+            {
+              "title": "Développement Web",
+              "description": "Des sites performants et responsifs adaptés à vos besoins professionnels."
+            },
+            {
+              "title": "Applications et outils",
+              "description": "Nous concevons également des applications et des outils modernes."
+            },
+            {
+              "title": "SEO & Performance",
+              "description": "Optimisation pour le référencement et la rapidité de chargement de votre site."
+            },
+            {
+              "title": "Maintenance & Sécurité",
+              "description": "Suivi régulier et sécurisation des données pour une tranquillité d'esprit totale."
+            }
+          ]
+        },
+        "servicesSteps": {
+          "title": "Les étapes de création de votre site",
+          "steps": [
+            "Conception",
+            "Développement Web",
+            "Tests & Optimisation",
+            "Lancement & Maintenance"
+          ]
+        },
+        "servicesAudit": {
+          "title": "Envie de savoir si vous êtes bien préparé numériquement ?",
+          "subtitle": "Parlons-en. On vous guide avec clarté et sans jargon.",
+          "button": "Nous contacter"
+        },
+        "servicesAvis": {
+          "title": "Ce que disent nos clients",
+          "testimonials": [
+            {
+              "name": "Jean Dupont",
+              "feedback": "BuildCorp a complètement transformé notre site web et augmenté notre trafic de 300% !"
+            },
+            {
+              "name": "Marie Lefevre",
+              "feedback": "Un service client réactif et des solutions digitales sur-mesure !"
+            },
+            {
+              "name": "Thomas Martin",
+              "feedback": "Leur équipe est incroyablement professionnelle et toujours à l'écoute."
+            }
+          ]
+        }
+      }
+      
+    
   

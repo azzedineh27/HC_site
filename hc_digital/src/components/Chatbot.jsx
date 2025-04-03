@@ -1,26 +1,17 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "../styles/Chatbot.css";
-import chatbotIcon from "../assets/chatbot-icon.png"; // Image pour la bulle du chatbot
+import chatbotIcon from "../assets/chatbot-icon.png";
 
 const Chatbot = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { text: "Bonjour ! Comment puis-je vous aider ?", sender: "bot" },
+    { text: t("chatbot.greeting"), sender: "bot" }
   ]);
 
-  const questions = [
-    "Quels sont vos services ?",
-    "Comment vous contacter ?",
-    "Quels sont vos tarifs ?",
-    "Avez-vous des références ?",
-  ];
-
-  const responses = {
-    "Quels sont vos services ?": "Nous proposons du développement web, du design UX/UI, du SEO et de la maintenance.",
-    "Comment vous contacter ?": "Contactez-nous via notre formulaire de contact ou par email à contact@HC Digital.com.",
-    "Quels sont vos tarifs ?": "Nos tarifs varient selon les projets. Contactez-nous pour un devis personnalisé.",
-    "Avez-vous des références ?": "Oui ! Consultez nos réalisations dans la section 'Nos Projets'.",
-  };
+  const questions = t("chatbot.questions", { returnObjects: true });
+  const responses = t("chatbot.responses", { returnObjects: true });
 
   const handleQuestionClick = (question) => {
     setMessages([...messages, { text: question, sender: "user" }, { text: responses[question], sender: "bot" }]);
@@ -56,7 +47,7 @@ const Chatbot = () => {
           </div>
 
           <p className="chatbot-contact">
-            ❓ Vous n'avez pas trouvé ce que vous cherchez ? <a href="/contact">Contactez-nous !</a>
+            {t("chatbot.fallback")} <a href="/contact">{t("chatbot.contactLink")}</a>
           </p>
         </div>
       )}

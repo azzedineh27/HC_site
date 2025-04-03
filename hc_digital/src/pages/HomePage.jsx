@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import CursorParticles from "../components/CursorParticles";
 import Navbar from "../components/Navbar";
-import AccueilFront from "../components/AccueilFront";
+import AccueilHeader from "../components/AccueilHeader";
 import AccueilQSN from "../components/AccueilQSN";
 import AccueilExplore from "../components/AccueilExplore";
 import AccueilHighlight from "../components/AccueilHighlight";
@@ -34,7 +34,7 @@ function HomePage() {
     <>
       <CursorParticles />
       <Navbar />
-      <AccueilFront />
+      <AccueilHeader />
       <AccueilQSN />
       <AccueilExplore />
       <AccueilOffres />      

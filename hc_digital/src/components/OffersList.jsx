@@ -1,76 +1,50 @@
-// 📁 src/components/OffersList.jsx
 import "../styles/OffersList.css";
 import { FaRocket, FaGem, FaStar } from "react-icons/fa";
-
-const offers = [
-  {
-    title: "Starter",
-    icon: <FaRocket className="offer-icon" />,
-    description: "Une base solide pour démarrer votre projet digital.",
-    features: [
-      "Site vitrine 3 pages",
-      "Formulaire de contact",
-      "Design responsive",
-    ],
-    button: "Demander un devis",
-    highlight: false,
-  },
-  {
-    title: "Pro",
-    icon: <FaGem className="offer-icon" />,
-    description: "Pensé pour les entreprises en pleine croissance.",
-    features: [
-      "Site complet jusqu’à 10 pages",
-      "Blog / CMS intégré",
-      "Optimisation SEO",
-      "Maintenance 3 mois incluse",
-    ],
-    button: "Demander un devis",
-    highlight: true,
-  },
-  {
-    title: "Sur-mesure",
-    icon: <FaStar className="offer-icon" />,
-    description: "Une solution taillée pour vos besoins spécifiques.",
-    features: [
-      "Cahier des charges personnalisé",
-      "Fonctionnalités sur demande",
-      "Accompagnement UX/UI",
-      "Devis sur mesure",
-    ],
-    button: "Demander un devis",
-    highlight: false,
-  },
-];
-
+import { useTranslation } from "react-i18next";
 
 const OffersList = () => {
+  const { t } = useTranslation();
+
+  const offers = [
+    {
+      key: "starter",
+      icon: <FaRocket className="offer-icon" />
+    },
+    {
+      key: "pro",
+      icon: <FaGem className="offer-icon" />
+    },
+    {
+      key: "surmesure",
+      icon: <FaStar className="offer-icon" />
+    }
+  ];
+
   return (
     <section className="offers-section" id="offers-section">
-      <h1 className="offers-main-title">Nos Formules</h1>
-      <p className="offers-subtitle">
-        Choisissez la formule qui vous convient et faites passer votre entreprise au niveau supérieur.
-      </p>
+      <h1 className="offers-main-title">{t("offersList.title")}</h1>
+      <p className="offers-subtitle">{t("offersList.subtitle")}</p>
+
       <div className="offers-container">
-        {offers.map((offer, index) => (
-          <div
-            key={index}
-            className={`offer-card ${offer.highlight ? "highlight" : ""}`}
-          >
-            {offer.icon}
-            <h2 className="offer-title">{offer.title}</h2>
-            <p className="offer-description">{offer.description}</p>
+        {offers.map((offer, index) => {
+          const offerData = t(`offersList.offers.${offer.key}`, { returnObjects: true });
+
+          return (
+            <div key={index} className={`offer-card ${offer.key === "pro" ? "highlight" : ""}`}>
+              {offer.icon}
+              <h2 className="offer-title">{offerData.title}</h2>
+              <p className="offer-description">{offerData.description}</p>
               <ul className="offer-features">
-                {offer.features && offer.features.map((feature, i) => (
+                {offerData.features.map((feature, i) => (
                   <li key={i}>{feature}</li>
                 ))}
               </ul>
-
-            <button className={`offer-btn ${offer.title === "Sur-mesure" ? "secondary" : ""}`}>
-              {offer.button}
-            </button>
-          </div>
-        ))}
+              <button className={`offer-btn ${offer.key === "surmesure" ? "secondary" : ""}`}>
+                {offerData.button}
+              </button>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

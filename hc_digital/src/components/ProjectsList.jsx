@@ -1,17 +1,19 @@
 import "../styles/ProjectsList.css";
 import { useState } from "react";
 import ProjectLightbox from "./ProjectLightbox";
-
-const projects = [
-  { src: "./src/assets/FA_image.png", alt: "Projet 1" },
-  { src: "./src/assets/outil_renta.png", alt: "Projet 2" },
-  { src: "./src/assets/idrymen_image.png", alt: "Projet 3" },
-  { src: "./src/assets/etudeplus_project.png", alt: "Projet 4" },
-  { src: "./src/assets/coming_soon.png", alt: "Coming Soon" },
-];
+import { useTranslation } from "react-i18next";
 
 const ProjectsList = () => {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(null);
+
+  const projects = [
+    { src: "./src/assets/FA_image.png", alt: t("projectsList.images.0.alt") },
+    { src: "./src/assets/outil_renta.png", alt: t("projectsList.images.1.alt") },
+    { src: "./src/assets/idrymen_image.png", alt: t("projectsList.images.2.alt") },
+    { src: "./src/assets/etudeplus_project.png", alt: t("projectsList.images.3.alt") },
+    { src: "./src/assets/coming_soon.png", alt: t("projectsList.images.4.alt") },
+  ];
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
@@ -26,16 +28,12 @@ const ProjectsList = () => {
   return (
     <div id="nos-projets" className="project-section-wrapper">
       <section className="project-header">
-        <h1>Nos Projets Réalisés</h1>
+        <h1>{t("projectsList.title")}</h1>
       </section>
 
       <div className="projects-container">
         {projects.map((project, index) => (
-          <div
-            key={index}
-            className="project-card"
-            onClick={() => setCurrentIndex(index)}
-          >
+          <div key={index} className="project-card" onClick={() => setCurrentIndex(index)}>
             <img src={project.src} alt={project.alt} />
           </div>
         ))}

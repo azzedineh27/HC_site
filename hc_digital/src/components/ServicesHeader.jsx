@@ -1,15 +1,18 @@
 import "../styles/ServicesHeader.css";
+import { useTranslation } from "react-i18next";
 
 const ServicesHeader = () => {
+  const { t } = useTranslation();
+
   const handleSmoothScroll = (event) => {
     event.preventDefault();
     const targetSection = document.querySelector("#services-detail");
 
     if (targetSection) {
-      const topOffset = targetSection.offsetTop; // Récupère la position exacte de la section
+      const topOffset = targetSection.offsetTop;
       window.scrollTo({
         top: topOffset,
-        behavior: "smooth", // Défilement fluide activé
+        behavior: "smooth",
       });
     }
   };
@@ -17,14 +20,11 @@ const ServicesHeader = () => {
   return (
     <section className="services-header">
       <div>
-        <h1>Nos Services</h1>
-        <p>Découvrez comment HC Digital peut propulser votre entreprise avec des solutions digitales sur-mesure</p>
-        <a className="explorer" href="#services-detail">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Explorer
+        <h1>{t("servicesHeader.title")}</h1>
+        <p>{t("servicesHeader.subtitle")}</p>
+        <a className="explorer" href="#services-detail" onClick={handleSmoothScroll}>
+          <span></span><span></span><span></span><span></span>
+          {t("servicesHeader.button")}
         </a>
       </div>
     </section>

@@ -1,26 +1,14 @@
-// ... imports
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "../styles/ContactForm.css";
 import Navbar from "../components/Navbar";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const [formData, setFormData] = useState({
-    fullname: "",
-    email: "",
-    tel: "",
-    message: "",
-  });
-
-  const [quoteData, setQuoteData] = useState({
-    name: "",
-    email: "",
-    formula: "",
-    feature: "",
-    budget: "",
-    details: "",
-  });
+  const [formData, setFormData] = useState({ fullname: "", email: "", tel: "", message: "" });
+  const [quoteData, setQuoteData] = useState({ name: "", email: "", formula: "", feature: "", budget: "", details: "" });
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -29,15 +17,12 @@ const ContactForm = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const handleContactChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-
-  const handleQuoteChange = (e) =>
-    setQuoteData({ ...quoteData, [e.target.name]: e.target.value });
+  const handleContactChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleQuoteChange = (e) => setQuoteData({ ...quoteData, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Message envoyé avec succès !");
+    alert(t("contact.success"));
   };
 
   return (
@@ -45,97 +30,40 @@ const ContactForm = () => {
       <Navbar />
       <div className="contact-wrapper">
         <div className="contact-box-left">
-          <h2>Restons connectés</h2>
-          <p>Une idée, un projet ou besoin d’un devis ?</p>
+          <h2>{t("contact.title")}</h2>
+          <p>{t("contact.subtitle")}</p>
           <div className="contact-highlight">
-            <p>📞 +33 1 23 45 67 89</p>
+            <p>📞 +33 7 49 08 20 57</p>
             <p>📧 contact@hcdigital.com</p>
           </div>
           <button className="switch-btn" onClick={() => setIsFlipped(!isFlipped)}>
-            {isFlipped ? "Nous Contacter" : "Demander un Devis"}
+            {isFlipped ? t("contact.buttonFlipToContact") : t("contact.buttonFlipToQuote")}
           </button>
         </div>
 
-        {/* ✅ Flip container */}
         <div className={`form-flip-container ${isFlipped ? "flipped" : ""}`}>
           <div className="form-inner">
-            {/* Face avant - Contact */}
             <form onSubmit={handleSubmit} className="contact-form form-front">
-              <h2 className="contact-title">Contactez-nous</h2>
-              <input
-                name="fullname"
-                placeholder="Nom complet"
-                value={formData.fullname}
-                onChange={handleContactChange}
-                required
-              />
-              <input
-                name="email"
-                type="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleContactChange}
-                required
-              />
-              <input
-                name="tel"
-                placeholder="Téléphone"
-                value={formData.tel}
-                onChange={handleContactChange}
-                required
-              />
-              <textarea
-                name="message"
-                placeholder="Message"
-                value={formData.message}
-                onChange={handleContactChange}
-                rows="4"
-                required
-              />
-              <button type="submit" className="contact-button">Envoyer</button>
+              <h2 className="contact-title">{t("contact.form.title")}</h2>
+              <input name="fullname" placeholder={t("contact.form.name")} value={formData.fullname} onChange={handleContactChange} required />
+              <input name="email" type="email" placeholder={t("contact.form.email")} value={formData.email} onChange={handleContactChange} required />
+              <input name="tel" placeholder={t("contact.form.tel")} value={formData.tel} onChange={handleContactChange} required />
+              <textarea name="message" placeholder={t("contact.form.message")} value={formData.message} onChange={handleContactChange} rows="4" required />
+              <button type="submit" className="contact-button">{t("contact.form.send")}</button>
             </form>
 
-            {/* Face arrière - Devis */}
             <form onSubmit={handleSubmit} className="contact-form form-back">
-              <h2 className="contact-title">Demande de Devis</h2>
-              <input
-                name="name"
-                placeholder="Nom de l'entreprise"
-                value={quoteData.name}
-                onChange={handleQuoteChange}
-                required
-              />
-              <input
-                name="email"
-                type="email"
-                placeholder="Email"
-                value={quoteData.email}
-                onChange={handleQuoteChange}
-                required
-              />
-
-              {/* ✅ Sélecteur de formule */}
-              <select
-                name="formula"
-                value={quoteData.formula}
-                onChange={handleQuoteChange}
-                required
-              >
-                <option value="" disabled>Choisissez une formule</option>
-                <option value="standard">Standard</option>
-                <option value="pro">Pro</option>
-                <option value="surmesure">Sur-mesure</option>
+              <h2 className="contact-title">{t("contact.quote.title")}</h2>
+              <input name="name" placeholder={t("contact.quote.company")} value={quoteData.name} onChange={handleQuoteChange} required />
+              <input name="email" type="email" placeholder="Email" value={quoteData.email} onChange={handleQuoteChange} required />
+              <select name="formula" value={quoteData.formula} onChange={handleQuoteChange} required>
+                <option value="" disabled>{t("contact.quote.formulaPlaceholder")}</option>
+                <option value="standard">{t("contact.quote.formulas.standard")}</option>
+                <option value="pro">{t("contact.quote.formulas.pro")}</option>
+                <option value="surmesure">{t("contact.quote.formulas.surmesure")}</option>
               </select>
-
-              <textarea
-                name="details"
-                placeholder="Détails"
-                value={quoteData.details}
-                onChange={handleQuoteChange}
-                rows="4"
-                required
-              />
-              <button type="submit" className="contact-button">Envoyer</button>
+              <textarea name="details" placeholder={t("contact.quote.details")} value={quoteData.details} onChange={handleQuoteChange} rows="4" required />
+              <button type="submit" className="contact-button">{t("contact.form.send")}</button>
             </form>
           </div>
         </div>

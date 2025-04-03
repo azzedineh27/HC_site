@@ -1,20 +1,17 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "../styles/AccueilQSN.css";
 
 const AccueilQSN = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="presentation-section">
       <div className="presentation-text-container">
-        <h2 className="presentation-title">Qui sommes-nous ?</h2>
-        <p className="presentation-text">
-          HC Digital est une entreprise de solutions digitales qui repousse les
-          limites de l'innovation et de la créativité. Depuis notre création,
-          nous avons accompagné des entreprises de toutes tailles dans leur
-          transformation numérique grâce à des technologies de pointe et des
-          designs sur mesure.
-        </p>
+        <h2 className="presentation-title">{t("accueilQSN.title")}</h2>
+        <p className="presentation-text">{t("accueilQSN.text")}</p>
         <a href="/services" className="presentation-btn">
-          En savoir plus
+          {t("accueilQSN.button")}
         </a>
       </div>
       <div className="presentation-image">

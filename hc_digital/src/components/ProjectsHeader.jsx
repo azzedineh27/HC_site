@@ -1,6 +1,9 @@
 import "../styles/ProjectsHeader.css";
+import { useTranslation } from "react-i18next";
 
 const ProjectsHeader = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="projects-header">
       <video autoPlay muted loop id="background-video">
@@ -8,9 +11,9 @@ const ProjectsHeader = () => {
       </video>
 
       <div className="header-content">
-        <h1 className="intro-title">Découvrez notre parcours</h1>
-        <p className="intro-text">Explorez les projets qui ont façonné notre histoire et notre expertise.</p>
-        <a href="#nos-projets" className="intro-btn">Voir nos projets</a>
+        <h1 className="intro-title">{t("projectsHeader.title")}</h1>
+        <p className="intro-text">{t("projectsHeader.text")}</p>
+        <a href="#nos-projets" className="intro-btn">{t("projectsHeader.button")}</a>
       </div>
     </section>
   );

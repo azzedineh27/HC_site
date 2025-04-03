@@ -1,29 +1,29 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "/src/styles/Footer.css";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer-section">
       <div className="footer-container">
-        {/* Section du logo et du slogan */}
         <div className="footer-logo">
           <h2 className="footer-logo-text">HC Digital</h2>
-          <p className="footer-slogan">Innover pour un avenir digital.</p>
+          <p className="footer-slogan">{t("footer.slogan")}</p>
         </div>
 
-        {/* Section des liens rapides */}
         <div className="footer-links">
-          <h3>Liens Rapides</h3>
+          <h3>{t("footer.links.title")}</h3>
           <ul>
-            <li><a href="/offres">Nos Offres</a></li>
-            <li><a href="/projets">Nos Projets</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/offres">{t("footer.links.offres")}</a></li>
+            <li><a href="/projets">{t("footer.links.projets")}</a></li>
+            <li><a href="/contact">{t("footer.links.contact")}</a></li>
           </ul>
         </div>
 
-        {/* Section des réseaux sociaux */}
         <div className="footer-social">
-          <h3>Suivez-nous</h3>
+          <h3>{t("footer.social.title")}</h3>
           <div className="social-icons">
             <a href="#" className="social-icon"><i className="fab fa-facebook-f"></i></a>
             <a href="#" className="social-icon"><i className="fab fa-twitter"></i></a>
@@ -31,7 +31,6 @@ const Footer = () => {
             <a href="#" className="social-icon"><i className="fab fa-instagram"></i></a>
           </div>
 
-          {/* Conteneur des images réseaux */}
           <div className="social-images">
             <a href="https://www.snapchat.com" target="_blank" rel="noopener noreferrer">
               <img src="./src/assets/snap.webp" alt="Snapchat" className="social-image" />
@@ -45,24 +44,22 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Nouvelle section Application Mobile */}
         <div className="footer-app">
-          <h3>Notre Application</h3>
-          <p>Téléchargez notre application sur votre mobile pour une meilleure expérience.</p>
+          <h3>{t("footer.app.title")}</h3>
+          <p>{t("footer.app.text")}</p>
           <div className="app-buttons">
             <a href="#" className="app-link">
-              <img src="./src/assets/apple_store.png" alt="Télécharger sur l'App Store" />
+              <img src="./src/assets/apple_store.png" alt="App Store" />
             </a>
             <a href="#" className="app-link">
-              <img src="./src/assets/play_store.png" alt="Disponible sur Google Play" />
+              <img src="./src/assets/play_store.png" alt="Play Store" />
             </a>
           </div>
         </div>
       </div>
 
-      {/* Copyright et crédits */}
       <div className="footer-bottom">
-        <p>&copy; 2024 HC Digital. Tous droits réservés.</p>
+        <p>{t("footer.copyright")}</p>
       </div>
     </footer>
   );

@@ -1,14 +1,369 @@
 {
-    "navbar": {
-      "home": "Accueil",
-      "services": "Services",
-      "offers": "Offres",
-      "projects": "Projets",
+  "accueilHeader": {
+    "title": "HC Digital",
+    "subtitle": "Digital innovation serving your business",
+    "button": "Explore ↓"
+  },
+  "accueilExplore": {
+    "bgText": "Creation",
+    "title": "Explore our world",
+    "description": "At HC Digital, we take pride in crafting innovative digital solutions. Whether you're a curious candidate or a client seeking partnerships, discover a world where technology meets innovation. From tailor-made websites to complex app integrations, our expertise covers all areas of digital.",
+    "button": "Explore"
+  },
+  "accueilHighlight": {
+    "title": "Discover our Projects",
+    "text": "Explore our most impressive projects, each one reflecting our expertise and passion for innovation. Whether local or international, HC Digital brings ideas to life.",
+    "button": "See our work"
+  },
+  "accueilInspiration": {
+    "title": "Our Vision",
+    "quote": "\"The future belongs to those who dare to imagine it.\"",
+    "subtext": "With HC Digital, innovation doesn't wait for tomorrow."
+  },
+  "accueilOffres": {
+    "title": "Offers designed for you",
+    "text": "Whether you're a startup, SME, or a large business, our services adapt to your ambitions. Each offer is crafted to combine performance, clarity, and customization.",
+    "button": "See our offers",
+    "cards": {
+      "site": "Showcase Website",
+      "app": "Custom App",
+      "infra": "Infrastructure",
+      "mobile": "Mobile & UX"
+    }
+  },
+  "accueilQSN": {
+    "title": "Who are we?",
+    "text": "HC Digital is a digital solutions company pushing the limits of innovation and creativity. Since our creation, we have supported companies of all sizes in their digital transformation using cutting-edge technologies and custom designs.",
+    "button": "Learn more"
+  },
+  "chatbot": {
+    "greeting": "Hello! How can I help you?",
+    "questions": [
+      "What services do you offer?",
+      "How can I contact you?",
+      "What are your prices?",
+      "Do you have references?"
+    ],
+    "responses": {
+      "Quels sont vos services ?": "We offer web development, UX/UI design, SEO, and maintenance services.",
+      "Comment vous contacter ?": "Reach out via our contact form or email us at contact@hcdigital.com.",
+      "Quels sont vos tarifs ?": "Our prices vary depending on the project. Contact us for a personalized quote.",
+      "Avez-vous des références ?": "Yes! Check out our work in the 'Projects' section."
+    },
+    "fallback": "❓ Didn't find what you were looking for?",
+    "contactLink": "Contact us!"
+  },
+  "contact": {
+    "title": "Let's stay connected",
+    "subtitle": "An idea, a project or need a quote?",
+    "buttonFlipToQuote": "Request a Quote",
+    "buttonFlipToContact": "Contact Us",
+    "form": {
+      "title": "Contact Us",
+      "name": "Full name",
+      "email": "Email",
+      "tel": "Phone",
+      "message": "Message",
+      "send": "Send"
+    },
+    "quote": {
+      "title": "Quote Request",
+      "company": "Company name",
+      "formulaPlaceholder": "Choose a plan",
+      "formulas": {
+        "standard": "Standard",
+        "pro": "Pro",
+        "surmesure": "Custom"
+      },
+      "details": "Details"
+    },
+    "success": "Message sent successfully!"
+  },
+  "devis": {
+    "title": "Request Your Quote",
+    "name": "Name:",
+    "email": "Email:",
+    "siteType": "Type of site:",
+    "types": {
+      "standard": "Standard Site",
+      "medium": "Medium Site",
+      "premium": "Premium Site"
+    },
+    "features": "Site topic and description:",
+    "featuresPlaceholder": "Site description (colors, layout, purpose, etc.)",
+    "send": "Send"
+  },
+  "footer": {
+    "slogan": "Innovating for a digital future.",
+    "links": {
+      "title": "Quick Links",
+      "offres": "Our Offers",
+      "projets": "Our Projects",
       "contact": "Contact"
     },
-    "header": {
-      "title": "Bienvenue sur BuildCorp",
-      "description": "Nous vous accompagnons dans votre transformation digitale."
+    "social": {
+      "title": "Follow us"
+    },
+    "app": {
+      "title": "Our App",
+      "text": "Download our mobile app for a better experience."
+    },
+    "copyright": "© 2024 HC Digital. All rights reserved."
+  },
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "offres": "Offers",
+    "projets": "Projects",
+    "contact": "Contact"
+  },
+  "loading": {
+    "text": "Launching your digital universe...",
+    "skip": "Skip"
+  },
+  "offersHeader": {
+  "title": "Our Offers",
+  "subtitle": "Solutions tailored to every project, from launch to performance.",
+  "button": "↓ Discover our plans"
+},
+"offersHelp": {
+  "title": "Not sure? We can help!",
+  "text": "Take a look at the chatbot on the right, or tell us what you're looking for and we'll guide you to the most suitable offer.",
+  "button": "Let’s talk"
+},
+"offersList": {
+  "title": "Our Plans",
+  "subtitle": "Choose the plan that suits you and take your business to the next level.",
+  "offers": {
+    "starter": {
+      "title": "Starter",
+      "description": "A solid foundation to launch your digital project.",
+      "features": [
+        "3-page showcase website",
+        "Contact form",
+        "Responsive design"
+      ],
+      "button": "Request a quote"
+    },
+    "pro": {
+      "title": "Pro",
+      "description": "Designed for growing businesses.",
+      "features": [
+        "Full website up to 10 pages",
+        "Integrated blog / CMS",
+        "SEO optimization",
+        "3 months maintenance included"
+      ],
+      "button": "Request a quote"
+    },
+    "surmesure": {
+      "title": "Custom",
+      "description": "A solution tailored to your specific needs.",
+      "features": [
+        "Custom specifications",
+        "On-demand features",
+        "UX/UI support",
+        "Custom quote"
+      ],
+      "button": "Request a quote"
     }
   }
-  
+},
+"offersProducts": {
+  "title": "Extra Products",
+  "subtitle": "Discover our additional tools to boost your productivity.",
+  "products": [
+    {
+      "title": "Mobile App",
+      "description": "Leverage our expertise to build modern and effective mobile apps.",
+      "icon": "📱"
+    },
+    {
+      "title": "Analytics Tool",
+      "description": "Track your stats in real time with our interactive dashboard.",
+      "icon": "📊"
+    },
+    {
+      "title": "Chatbot Assistants",
+      "description": "Benefit from smart assistance for your strategic decisions.",
+      "icon": "🤖"
+    }
+  ]
+},
+"offersQuiz": {
+  "title": "Which pack is right for you?",
+  "questions": [
+    {
+      "question": "Why do you want a website?",
+      "options": [
+        "To quickly have an online presence",
+        "To grow my business / sell services",
+        "To offer a unique and impactful digital experience"
+      ]
+    },
+    {
+      "question": "Your business is…",
+      "options": [
+        "Newly launched or very young",
+        "Actively growing",
+        "Well-established with advanced needs"
+      ]
+    },
+    {
+      "question": "Do you need specific features?",
+      "options": [
+        "Just content",
+        "Blog, form, newsletter",
+        "Online payment, CRM, client area, etc."
+      ]
+    },
+    {
+      "question": "What’s your ideal timeline?",
+      "options": [
+        "Less than a month",
+        "1 to 2 months",
+        "Over 2 months, with a planning phase"
+      ]
+    },
+    {
+      "question": "Your target audience is…",
+      "options": [
+        "Local / regional",
+        "National",
+        "International"
+      ]
+    }
+  ],
+  "result": {
+    "starter": {
+      "title": "Starter Plan",
+      "description": "Perfect for launching quickly with the essentials."
+    },
+    "pro": {
+      "title": "Pro Plan",
+      "description": "Designed for serious, growing projects."
+    },
+    "surmesure": {
+      "title": "Custom Plan",
+      "description": "Ideal if you need a 100% personalized project."
+    },
+    "button": "See the plan",
+    "restart": "Start over"
+  },
+  "progress": "Question {{current}} / {{total}}"
+},
+"projectsHeader": {
+  "title": "Discover our journey",
+  "text": "Explore the projects that shaped our story and expertise.",
+  "button": "View our projects"
+},
+"projectsChiffres": {
+  "title": "Key Figures",
+  "cards": [
+    { "value": "+500", "text": "Projects delivered" },
+    { "value": "+300", "text": "Satisfied clients" },
+    { "value": "5", "text": "Countries served" },
+    { "value": "+10", "text": "Years of experience" }
+  ]
+},
+"projectsTimeline": {
+  "title": "The Evolution of HC Digital",
+  "events": [
+    {
+      "year": "2018",
+      "title": "HC Digital is born",
+      "description": "The birth of HC Digital with a vision of technological innovation."
+    },
+    {
+      "year": "2020",
+      "title": "First Major Project",
+      "description": "We partnered with a startup to build a SaaS platform."
+    },
+    {
+      "year": "2022",
+      "title": "International Expansion",
+      "description": "Opened our first office abroad and grew our team."
+    },
+    {
+      "year": "2024",
+      "title": "Innovation & AI",
+      "description": "Integrated Artificial Intelligence to optimize our solutions."
+    }
+  ]
+},
+"projectsList": {
+  "title": "Our Completed Projects",
+  "images": [
+    { "alt": "Project 1" },
+    { "alt": "Project 2" },
+    { "alt": "Project 3" },
+    { "alt": "Project 4" },
+    { "alt": "Coming Soon" }
+  ]
+},
+"lightbox": {
+  "alt": "Project preview",
+  "prev": "Previous",
+  "next": "Next"
+},
+"servicesHeader": {
+  "title": "Our Services",
+  "subtitle": "Discover how HC Digital can boost your business with tailor-made digital solutions",
+  "button": "Explore"
+},
+"servicesDetail": {
+  "title": "Our Services in Detail",
+  "items": [
+    {
+      "title": "Web Development",
+      "description": "High-performance, responsive websites tailored to your professional needs."
+    },
+    {
+      "title": "Applications & Tools",
+      "description": "We also design modern applications and tools to enhance your workflow."
+    },
+    {
+      "title": "SEO & Performance",
+      "description": "Optimization for search engines and fast loading speeds for your site."
+    },
+    {
+      "title": "Maintenance & Security",
+      "description": "Ongoing monitoring and data security for complete peace of mind."
+    }
+  ]
+},
+"servicesSteps": {
+  "title": "The steps to building your website",
+  "steps": [
+    "Design",
+    "Web Development",
+    "Testing & Optimization",
+    "Launch & Maintenance"
+  ]
+},
+"servicesAudit": {
+  "title": "Want to know if you're digitally ready?",
+  "subtitle": "Let’s talk. We’ll guide you with clarity and no jargon.",
+  "button": "Contact us"
+},
+"servicesAvis": {
+  "title": "What our clients say",
+  "testimonials": [
+    {
+      "name": "Jean Dupont",
+      "feedback": "BuildCorp completely transformed our website and increased our traffic by 300%!"
+    },
+    {
+      "name": "Marie Lefevre",
+      "feedback": "Responsive customer service and custom digital solutions!"
+    },
+    {
+      "name": "Thomas Martin",
+      "feedback": "Their team is incredibly professional and always attentive."
+    }
+  ]
+}
+}
+
+
+

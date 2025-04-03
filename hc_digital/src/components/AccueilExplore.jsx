@@ -1,25 +1,21 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "../styles/AccueilExplore.css";
 
 const AccueilExplore = () => {
+  const { t } = useTranslation();
+
   return (
-    <section className="explore-section">
+    <section className="explore-section" id="explore-section">
       {/* Texte en arrière-plan */}
-      <div className="big-text">Création</div>
+      <div className="big-text">{t("accueilExplore.bgText")}</div>
 
       {/* Contenu principal */}
       <div className="explore-content">
-        <h2 className="explore-title">Explorez notre univers</h2>
-        <p className="explore-text">
-          Chez HC Digital, nous mettons un point d'honneur à créer des solutions
-          numériques innovantes. Que vous soyez un candidat curieux ou un
-          client à la recherche de partenariats, découvrez un monde où la
-          technologie rencontre l'innovation. De la conception de sites web sur
-          mesure à l'intégration d'applications complexes, notre expertise
-          s'étend sur tous les domaines du digital.
-        </p>
+        <h2 className="explore-title">{t("accueilExplore.title")}</h2>
+        <p className="explore-text">{t("accueilExplore.description")}</p>
         <a href="/services" className="explore-btn">
-          Explorer
+          {t("accueilExplore.button")}
         </a>
       </div>
     </section>
