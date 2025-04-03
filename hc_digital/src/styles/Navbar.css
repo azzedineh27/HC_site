@@ -113,3 +113,42 @@
   color: #00c6ff;
   cursor: pointer;
 }
+/* === Responsive Navbar === */
+.mobile-menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-links {
+    display: flex !important; /* on garde l'horizontalité */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 0.95em;
+  }
+
+  .mobile-menu-icon {
+    display: none; /* on désactive le burger si on veut une navbar réduite mais visible */
+  }
+
+  .language-dropdown {
+    margin-left: auto;
+  }
+
+  .navbar-container {
+    padding: 10px 20px;
+  }
+}

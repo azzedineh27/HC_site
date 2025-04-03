@@ -1,7 +1,8 @@
 import "../styles/OffersHeader.css";
 
 const OffersHeader = () => {
-  const handleScroll = () => {
+  const handleScroll = (e) => {
+    e.preventDefault(); // empêche le saut instantané du href
     const section = document.getElementById("offers-section");
     if (section) section.scrollIntoView({ behavior: "smooth" });
   };
@@ -12,9 +13,13 @@ const OffersHeader = () => {
       <p className="offers-hero-subtitle">
         Des solutions adaptées à chaque projet, du lancement à la performance.
       </p>
-      <button className="offers-scroll-btn" onClick={handleScroll}>
+      <a
+        href="#offers-section"
+        className="offers-scroll-btn"
+        onClick={handleScroll}
+      >
         ↓ Découvrir nos formules
-      </button>
+      </a>
     </section>
   );
 };

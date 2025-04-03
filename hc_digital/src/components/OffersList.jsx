@@ -46,7 +46,7 @@ const offers = [
 
 const OffersList = () => {
   return (
-    <section className="offers-section">
+    <section className="offers-section" id="offers-section">
       <h1 className="offers-main-title">Nos Formules</h1>
       <p className="offers-subtitle">
         Choisissez la formule qui vous convient et faites passer votre entreprise au niveau supérieur.

@@ -19,7 +19,7 @@ const ServicesHeader = () => {
       <div>
         <h1>Nos Services</h1>
         <p>Découvrez comment HC Digital peut propulser votre entreprise avec des solutions digitales sur-mesure</p>
-        <a className="explorer" href="#services-detail" onClick={handleSmoothScroll}>
+        <a className="explorer" href="#services-detail">
           <span></span>
           <span></span>
           <span></span>

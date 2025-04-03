@@ -1,0 +1,14 @@
+{
+    "navbar": {
+      "home": "Accueil",
+      "services": "Services",
+      "offers": "Offres",
+      "projects": "Projets",
+      "contact": "Contact"
+    },
+    "header": {
+      "title": "Bienvenue sur BuildCorp",
+      "description": "Nous vous accompagnons dans votre transformation digitale."
+    }
+  }
+  

@@ -127,7 +127,7 @@ const OffersQuiz = () => {
             >
               <h2 className="quiz-result-title">{result.title}</h2>
               <p className="quiz-result-desc">{result.description}</p>
-              <a href={result.link} className="quiz-btn">Voir l’offre</a>
+              <a href="#offers-section" className="quiz-btn">Voir l’offre</a>
               <button className="quiz-restart" onClick={resetQuiz}>Recommencer</button>
             </motion.div>
           )}
