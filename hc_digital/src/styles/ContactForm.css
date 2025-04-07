@@ -256,3 +256,28 @@
 .contact-form select option[value=""] {
   color: white;
 }
+.Toastify__toast--success {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.Toastify__toast--error {
+  background: rgba(255, 77, 77, 0.9);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+.custom-error-banner {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 77, 77, 0.95);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
