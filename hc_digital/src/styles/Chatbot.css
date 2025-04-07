@@ -177,6 +177,20 @@
 }
 
 .chatbot-contact a {
-  color: #00c6ff;
-  text-decoration: underline;
+  display: inline-block;
+  margin-top: 6px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 198, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chatbot-contact a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 198, 255, 0.5);
 }

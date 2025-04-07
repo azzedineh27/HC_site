@@ -44,18 +44,13 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-app">
-          <h3>{t("footer.app.title")}</h3>
-          <p>{t("footer.app.text")}</p>
-          <div className="app-buttons">
-            <a href="#" className="app-link">
-              <img src="./src/assets/apple_store.png" alt="App Store" />
-            </a>
-            <a href="#" className="app-link">
-              <img src="./src/assets/play_store.png" alt="Play Store" />
-            </a>
-          </div>
+        <div className="footer-legal">
+          <h3>{t("footer.legal.title")}</h3>
+          <ul>
+            <li><a href="/confidentialite">{t("footer.legal.rgpd")}</a></li>
+          </ul>
         </div>
+
       </div>
 
       <div className="footer-bottom">

@@ -14,7 +14,7 @@ const OffersHeader = () => {
     <section className="offers-hero">
       <h1 className="offers-hero-title">{t("offersHeader.title")}</h1>
       <p className="offers-hero-subtitle">{t("offersHeader.subtitle")}</p>
-      <a href="#offers-section" className="offers-scroll-btn" onClick={handleScroll}>
+      <a href="#offers-section" className="offers-scroll-btn">
         {t("offersHeader.button")}
       </a>
     </section>

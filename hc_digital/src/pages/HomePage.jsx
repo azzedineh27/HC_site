@@ -9,27 +9,10 @@ import AccueilOffres from "../components/AccueilOffres";
 import AccueilInspiration from "../components/AccueilInspiration";
 import Footer from "../components/Footer";
 import Chatbot from "../components/Chatbot";
-import LoadingScreen from "../components/LoadingScreen";
 import "../styles/global.css";
 import "../styles/AccueilPage.css";
 
 function HomePage() {
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    const alreadyVisited = sessionStorage.getItem("hasVisitedHome");
-    if (!alreadyVisited) {
-      setIsLoading(true);
-      sessionStorage.setItem("hasVisitedHome", "true");
-      const timeout = setTimeout(() => setIsLoading(false), 5000);
-      return () => clearTimeout(timeout);
-    }
-  }, []);
-
-  if (isLoading) {
-    return <LoadingScreen onFinish={() => setIsLoading(false)} />;
-  }
-
   return (
     <>
       <CursorParticles />

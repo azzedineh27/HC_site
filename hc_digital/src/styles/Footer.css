@@ -88,35 +88,37 @@
   transform: scale(1.1) rotate(2deg);
   box-shadow: 0px 10px 20px rgba(0, 198, 255, 0.3);
 }
-
-/* 🌟 Design de la Section Application Mobile */
-.footer-app {
+.footer-legal {
+  flex: 1;
+  min-width: 200px;
   text-align: center;
 }
 
-.footer-app p {
-  font-size: 1em;
-  color: #f0f8ff;
-  margin-bottom: 15px;
+.footer-legal h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #5da9e9;
 }
 
-.app-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+.footer-legal ul {
+  list-style: none;
+  padding: 0;
 }
 
-.app-link img {
-  width: 60px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  filter: brightness(0.9);
+.footer-legal ul li {
+  margin-bottom: 10px;
 }
 
-.app-link img:hover {
-  transform: scale(1.08);
-  filter: brightness(1);
+.footer-legal ul li a {
+  color: #e1f3ff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.footer-legal ul li a:hover {
+  color: #00c6ff;
+  transform: translateX(5px);
+}
 
 .footer-bottom {
   margin-top: 40px;

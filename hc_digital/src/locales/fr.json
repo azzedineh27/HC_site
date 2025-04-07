@@ -42,13 +42,13 @@
       "Quels sont vos services ?",
       "Comment vous contacter ?",
       "Quels sont vos tarifs ?",
-      "Avez-vous des références ?"
+      "Comment suivre mon projet ?"
     ],
     "responses": {
-      "Quels sont vos services ?": "Nous proposons du développement web, du design UX/UI, du SEO et de la maintenance.",
-      "Comment vous contacter ?": "Contactez-nous via notre formulaire de contact ou par email à contact@HC Digital.com.",
+      "Quels sont vos services ?": "Nous proposons du développement web et mobile, des outils de données, du SEO et bien d'autres services",
+      "Comment vous contacter ?": "Contactez-nous via notre formulaire de contact ou par email à contact@HCDigital.com.",
       "Quels sont vos tarifs ?": "Nos tarifs varient selon les projets. Contactez-nous pour un devis personnalisé.",
-      "Avez-vous des références ?": "Oui ! Consultez nos réalisations dans la section 'Nos Projets'."
+      "Comment suivre mon projet ?": "Envoyez un message au +33749082057 ou allez à la page de contact."
     },
     "fallback": "❓ Vous n'avez pas trouvé ce que vous cherchez ?",
     "contactLink": "Contactez-nous !"
@@ -107,9 +107,9 @@
     "social": {
       "title": "Suivez-nous"
     },
-    "app": {
-      "title": "Notre Application",
-      "text": "Téléchargez notre application sur votre mobile pour une meilleure expérience."
+    "legal": {
+      "title": "Mentions Légales",
+      "rgpd": "Politique de confidentialité."
     },
     "copyright": "© 2024 HC Digital. Tous droits réservés."
   },
@@ -138,37 +138,41 @@
     },
     "offersList": {
       "title": "Nos Formules",
-      "subtitle": "Choisissez la formule qui vous convient et faites passer votre entreprise au niveau supérieur.",
+      "subtitle": "Choisissez la formule qui correspond à vos besoins et faites passer votre entreprise au niveau supérieur.",
       "offers": {
         "starter": {
           "title": "Starter",
           "description": "Une base solide pour démarrer votre projet digital.",
           "features": [
-            "Site vitrine 3 pages",
-            "Formulaire de contact",
-            "Design responsive"
+            "Design adapté",
+            "Fonctionnalités de base",
+            "Modèles simples",
+            "Parfait pour commencer"
           ],
           "button": "Demander un devis"
         },
         "pro": {
           "title": "Pro",
-          "description": "Pensé pour les entreprises en pleine croissance.",
+          "description": "Pensé pour les entreprises en croissance.",
           "features": [
-            "Site complet jusqu’à 10 pages",
-            "Blog / CMS intégré",
+            "Design professionnel",
+            "Fonctionnalités courantes",
             "Optimisation SEO",
-            "Maintenance 3 mois incluse"
+            "Suivi des données",
+            "Maintenance incluse pendant 3 mois"
           ],
           "button": "Demander un devis"
         },
         "surmesure": {
           "title": "Sur-mesure",
-          "description": "Une solution taillée pour vos besoins spécifiques.",
+          "description": "Une solution adaptée à vos besoins spécifiques.",
           "features": [
-            "Cahier des charges personnalisé",
-            "Fonctionnalités sur demande",
+            "Design personnalisé",
+            "Fonctionnalités avancées",
             "Accompagnement UX/UI",
-            "Devis sur mesure"
+            "Optimisation SEO",
+            "Suivi des données",
+            "Maintenance incluse pendant 6 mois"
           ],
           "button": "Demander un devis"
         }
@@ -275,24 +279,24 @@
         "title": "L'Évolution de HC Digital",
         "events": [
           {
-            "year": "2018",
+            "year": "2022",
             "title": "Création de HC Digital",
             "description": "Naissance de HC Digital avec une vision d'innovation technologique."
           },
           {
-            "year": "2020",
-            "title": "Premier Grand Projet",
-            "description": "Nous avons collaboré avec une startup pour développer une plateforme SaaS."
-          },
-          {
-            "year": "2022",
-            "title": "Expansion Internationale",
-            "description": "Ouverture de notre premier bureau à l'étranger et croissance de notre équipe."
+            "year": "2023",
+            "title": "Diversification des Services",
+            "description": "Lancement de nouvelles expertises : mobile, design UI/UX, data... pour accompagner nos clients de A à Z."
           },
           {
             "year": "2024",
+            "title": "Expansion Internationale",
+            "description": "Premier partenariat à l'étranger et croissance de notre équipe."
+          },
+          {
+            "year": "2025",
             "title": "Innovation & IA",
-            "description": "Intégration de l'Intelligence Artificielle dans nos solutions pour optimiser les performances."
+            "description": "Intégration de l’IA dans nos services pour automatiser et faire évoluer l'enteprise vers une nouvelle ère."
           }
         ]
       },

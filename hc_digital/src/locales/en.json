@@ -104,9 +104,9 @@
     "social": {
       "title": "Follow us"
     },
-    "app": {
-      "title": "Our App",
-      "text": "Download our mobile app for a better experience."
+    "legal": {
+      "title": "Legal Notice",
+      "rgpd": "Privacy Policy."
     },
     "copyright": "© 2024 HC Digital. All rights reserved."
   },
@@ -270,24 +270,24 @@
   "title": "The Evolution of HC Digital",
   "events": [
     {
-      "year": "2018",
-      "title": "HC Digital is born",
-      "description": "The birth of HC Digital with a vision of technological innovation."
-    },
-    {
-      "year": "2020",
-      "title": "First Major Project",
-      "description": "We partnered with a startup to build a SaaS platform."
-    },
-    {
       "year": "2022",
-      "title": "International Expansion",
-      "description": "Opened our first office abroad and grew our team."
+      "title": "Creation of HC Digital",
+      "description": "HC Digital was born with a vision of technological innovation."
+    },
+    {
+      "year": "2023",
+      "title": "Service Diversification",
+      "description": "Launch of new expertise: mobile, UI/UX design, data... to support our clients from A to Z."
     },
     {
       "year": "2024",
+      "title": "International Growth",
+      "description": "First international partnership and team expansion."
+    },
+    {
+      "year": "2025",
       "title": "Innovation & AI",
-      "description": "Integrated Artificial Intelligence to optimize our solutions."
+      "description": "Integration of AI in our services to automate and evolve the company into a new era."
     }
   ]
 },

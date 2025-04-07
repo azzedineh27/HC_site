@@ -22,7 +22,7 @@ const ServicesHeader = () => {
       <div>
         <h1>{t("servicesHeader.title")}</h1>
         <p>{t("servicesHeader.subtitle")}</p>
-        <a className="explorer" href="#services-detail" onClick={handleSmoothScroll}>
+        <a className="explorer" href="#services-detail">
           <span></span><span></span><span></span><span></span>
           {t("servicesHeader.button")}
         </a>
